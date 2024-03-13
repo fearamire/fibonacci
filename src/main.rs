@@ -11,6 +11,7 @@ fn main() {
 
         // Get index from user
         print!("Please enter the index of the fibonacci number you would like.\n");
+        print!("(Use 0 indexing.)\n");
 
         io::stdin()
         .read_line(&mut max)
@@ -19,13 +20,14 @@ fn main() {
         let max:u32 = match max.trim().parse() {
             Ok(num) => num,
             Err(_) => {
-                print!("That wasn't a number.\n\n");
+                print!("That wasn't an acceptable number.\n\n");
                 continue
             }
         };
 
         print!("\n\n");
 
+        // Cases for indexes 0 and 1, else loop until correct index.
         if max == a {
             print!("The {max} index Fibonacci number is: {a}")
         } else if max == b {
