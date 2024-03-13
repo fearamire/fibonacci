@@ -1,9 +1,9 @@
 use std::io;
 
 fn main() {
-    let mut a: u32 = 0;
-    let mut b: u32 = 1;
-    let mut c: u32 = 0;
+    let mut a: u64 = 0;
+    let mut b: u64 = 1;
+    let mut c: u64 = 0;
     let mut i = 2;
 
     loop {
@@ -17,7 +17,7 @@ fn main() {
         .read_line(&mut max)
         .expect("Failed to read line.");
 
-        let max:u32 = match max.trim().parse() {
+        let max:u64 = match max.trim().parse() {
             Ok(num) => num,
             Err(_) => {
                 print!("That wasn't an acceptable number.\n\n");
